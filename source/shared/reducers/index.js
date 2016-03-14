@@ -1,32 +1,11 @@
-const initialState = [
-  { id: 1, text: 'Book 1', count: 2 },
-  { id: 2, text: 'Book 2', count: 3 },
-  { id: 3, text: 'Book 3', count: 4 },
-];
+import { combineReducers } from 'redux';
+import { routeReducer } from 'react-router-redux';
 
-const books = (state = {
-  items: initialState,
-}, action) => {
-  switch (action.type) {
-    case 'ADD_COUNT':
-      const newItems = state.items.map(item => {
-        if (item.id === action.item.id) {
-          item.count++;
-        }
+import booksReducer from 'shared/Books/reducers/booksReducer';
 
-        return item;
-      });
+const rootReducer = combineReducers({
+  books: booksReducer,
+  routing: routeReducer
+});
 
-      return Object.assign({}, state.items, {
-        items: newItems,
-      });
-    default:
-    return state;
-  }
-};
-
-const reducers = {
-  books
-};
-
-export default reducers;
+export default rootReducer;

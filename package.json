@@ -70,6 +70,7 @@
     "webpack-hot-middleware": "2.6.3"
   },
   "dependencies": {
+    "bluebird": "^3.3.4",
     "express": "4.13.4",
     "react": "0.14.6",
     "react-dom": "0.14.6",
@@ -78,8 +79,9 @@
     "react-router-redux": "^2.1.0",
     "redux": "3.0.6",
     "redux-logger": "2.0.4",
+    "redux-promise": "^0.5.1",
     "redux-simple-router": "2.0.4",
-    "redux-thunk": "1.0.3"
+    "redux-thunk": "^1.0.3"
   },
   "license": "MIT",
   "bugs": {

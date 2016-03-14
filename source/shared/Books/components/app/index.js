@@ -1,19 +1,22 @@
 import { connect } from 'react-redux';
-import createTitle from 'shared/components/title';
+import createTitle from 'shared/Books/components/title';
 
-const createApp = React => ({ title }) => {
+const createApp = React => ({title}) => {
   const Title = createTitle(React);
 
   return (
     <div>
+        <span>Hello World</span>
       <Title title={ title } />
     </div>
-  );
+    );
 };
 
 const mapStateToProps = (state) => {
-  const { title } = state;
-  return { title };
+  const {title} = state;
+  return {
+    title
+  };
 };
 
 // Connect props to component

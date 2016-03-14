@@ -1,6 +1,6 @@
 import { Router, Route } from 'react-router';
-import createApp from 'shared/components/app';
-import createTestData from 'shared/components/test-data';
+import createApp from 'shared/Books/components/app';
+import createTestData from 'shared/Books/components/test-data';
 
 export default (React, browserHistory) => {
 
@@ -9,5 +9,5 @@ export default (React, browserHistory) => {
       <Route path="/" component={ createApp(React) } />
       <Route path="/test-data" component={ createTestData(React) } />
     </Router>
-  );
+    );
 };
