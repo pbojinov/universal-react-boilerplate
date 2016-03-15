@@ -9,7 +9,7 @@ const logger = createLogger();
 const configureStore = (initialState = {}) => {
   return compose(
     applyMiddleware(
-      thunkMiddleware,
+      thunkmiddleware,
       promiseMiddleware,
       logger
     )

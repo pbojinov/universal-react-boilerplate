@@ -4,8 +4,11 @@ export const ADD_COUNT = 'ADD_COUNT';
 
 export function addCount(item) {
   return dispatch => {
-    // do some async work here
-    return dispatch(addedCount(item));
+    return new Promise((resolve, reject) => {
+      dispatch(addedCount(item));
+      resolve({});
+    });
+  // do some async work here
   }
 }
 

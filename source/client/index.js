@@ -12,7 +12,9 @@ import createTestData from 'shared/Books/components/test-data';
 
 // Sync dispatched route actions to the history
 const reduxRouterMiddleware = syncHistory(browserHistory);
-const createStoreWithMiddleware = applyMiddleware(reduxRouterMiddleware)(createStore);
+const createStoreWithMiddleware = applyMiddleware(
+  reduxRouterMiddleware
+)(createStore);
 
 const store = createStoreWithMiddleware(rootReducer);
 
