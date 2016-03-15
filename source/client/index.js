@@ -10,7 +10,6 @@ import { Router, Route } from 'react-router';
 import createApp from 'shared/Books/components/app';
 import createTestData from 'shared/Books/components/test-data';
 
-
 // Sync dispatched route actions to the history
 const reduxRouterMiddleware = syncHistory(browserHistory);
 const createStoreWithMiddleware = applyMiddleware(reduxRouterMiddleware)(createStore);

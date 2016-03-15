@@ -4,7 +4,6 @@ import { addCount } from 'shared/Books/actions/BookActions';
 
 const createApp = React => ({dispatch, books}) => {
   const Title = createTitle(React);
-  debugger;
   const bookNodes = books.items.map(book => {
     return (
       <div key={ book.id }>
